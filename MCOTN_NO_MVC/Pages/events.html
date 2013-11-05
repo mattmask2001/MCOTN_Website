@@ -1,0 +1,99 @@
+﻿
+<style>
+    .fc-state-highlight 
+    {
+        background-color:  #bba4cf;
+    }
+    #calevent
+    {
+        position: absolute;
+        display: none;
+        background-color: #bba4cf;
+        height:  300px;
+        width: 400px;
+        top: 30%;
+        left: 30%;
+        z-index: 10;
+        box-shadow: 8px 8px 8px black;
+        border-radius: 10px;
+    }
+    
+        #closeCalEvent
+        {
+            float: right;
+            margin-right: 20px;
+            margin-top: 5px;
+            text-decoration: none;
+            color: white;
+            background: none;
+            border: none;
+            width: 15px;
+        }
+
+        #title 
+        {
+            text-shadow: 2px 2px 2px black;
+            text-decoration: underline;
+        }
+
+    #date, #startTime, #endTime 
+    {
+        text-shadow: 1px 1px 1px black;    
+    }
+    
+    #closebtn
+    {
+        width: 24px;
+    }
+    
+</style>
+<div id="calendar">
+
+    <div id="calevent">
+        <a id="closeCalEvent" href="#"><img id="closebtn" src="../../Images/closebtngrey.png" /></a><br>
+        <div id="caleventinfo"></div>
+        
+    </div>
+    <div id="fullcal"></div>
+</div>
+
+<!--<iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showCalendars=0&amp;showTz=0&amp;height=400&amp;wkst=1&amp;bgcolor=%23ffffff&amp;src=mesquitefirstcotn%40gmail.com&amp;color=%232952A3&amp;src=en.usa%23holiday%40group.v.calendar.google.com&amp;color=%23B1440E&amp;ctz=America%2FChicago" style=" border-width:0 " width="90%" height="480" frameborder="0" scrolling="no"></iframe>-->
+<script src="../../Scripts/fullcalendar.min.js" type="text/javascript"></script>
+<script src="../../Scripts/gcal.js" type="text/javascript"></script>
+<script>
+    $(document).ready(function () {
+        var $eventpopup = $("#calevent");
+        var $event = $("#caleventinfo");
+        $eventpopup.draggable();
+        $("#closeCalEvent").click(function () {
+            $eventpopup.hide()
+            $event.empty();
+        });
+
+        $("#fullcal").fullCalendar(
+            {
+
+                eventSources: [
+                            'https://www.google.com/calendar/feeds/mesquitefirstcotn%40gmail.com/public/basic',
+                            'https://www.google.com/calendar/feeds/en.usa%23holiday%40group.v.calendar.google.com/public/basic'
+                        ],
+                eventClick: function (calEvent, jsEvent, view) {
+                    var date = $.fullCalendar.formatDate(calEvent.start, "MM/dd") || "None";
+                    var startTime = $.fullCalendar.formatDate(calEvent.start, "HH:mm tt");
+                    var endTime = $.fullCalendar.formatDate(calEvent.end, "HH:mm tt") || "None";
+                    if (startTime == '00:00 am' || startTime == '00:00 pm') startTime = "All Day Event";
+                                        
+                    $eventpopup.hide()
+                    $event.empty();
+                    $eventpopup.show('swing');
+                    $event.append('<h2 id="title">Event: ' + calEvent.title + '</h2><br />');
+                    $event.append('<p id="date">Date: ' + date + '</p><br />');
+                    $event.append('<p id="startTime">Start Time: ' + startTime + '</p><br />');
+                    if (startTime != 'All Day Event') $event.append('<p id="endTime">End Time: ' + endTime + '</p><br />');
+                    return false;
+                }
+            });
+    });
+
+
+</script>

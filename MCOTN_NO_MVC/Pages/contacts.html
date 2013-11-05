@@ -1,0 +1,245 @@
+﻿<style>
+        div#contactshead
+        {
+            padding: 10px;
+            height: 30%;
+            width:100%;
+            float:left;
+            background-color: rgba(0,0,0,0.1);
+        }
+            #pastorbobinfo img
+            {
+                width:30%;
+            }
+            #pastorbobinfo
+            {
+                width:60%;
+                float:left;
+            }
+            #address
+            {
+                text-align:center;
+                width: 40%;
+                float: left;
+                background-color: rgba(0,0,0,.1);
+            }
+            #seemap
+            {
+            text-decoration: underline;
+            color: #bba4cf;
+            }
+        #contactsbody
+        {
+        width: 100%;
+        float:left;
+        height: 60%;
+        }
+            #contactsbody h4
+            {
+                text-align: center;
+                text-decoration: underline;        
+            }
+            #positionheads 
+            {
+                width: 100%;
+                position: relative;
+                background-color: #7c5f8f;
+                table-layout:auto;
+                font-size: medium;
+                text-align:left;
+            }
+            table tr:hover
+            {
+                background-color: #bba4cf;
+            }
+            #associatepastors
+            {
+                width: 100%;
+                position: relative;
+                background-color: #7c5f8f;
+                table-layout:auto;
+                font-size: medium;
+                text-align:center;
+    
+            }
+            .tablename
+            {
+                width: 30%;
+            }
+            .tabletitle
+            {
+                width: 30%;
+            }
+            .tableemail
+            {
+                width: 40%;
+            }
+        #contactsfoot
+        {
+            float: left;
+            width: 100%;
+            background-color: rgba(0,0,0,0.1);
+            height: 10%;
+        }
+            
+    #googlemap
+    {
+        display: none;
+        position:fixed;
+        top:30%;
+        left: 50%
+    }
+</style>
+<div id="contactshead">
+    <div id="pastorbobinfo">
+        <img src="../Images/PastorBob.jpg" /><br />
+        <strong style="font-size: large">Pastor Robert "Bob" Bilyeu</strong><br />
+        <strong style="font-size: large">Pastor@mesquitecotn.com</strong>
+    </div>
+    <address id="address">
+        Mesquite First Church of the Nazarene<br />
+        1301 N. Beltline Rd.<br />
+        Mesquite, Tx 75149
+        <br />
+        <a id="seemap" href="#">Show/Hide Map</a><br />
+        Ph# 214-663-9746<br />
+    </address>
+
+</div>
+<div id="contactsbody">
+    <h4>
+        Associate Pastors</h4>
+    <table id="associatepastors">
+        <tr>
+            <td class="half tablename">
+                Roy Rodriquez
+            </td>
+            <td class="half tableemail">
+                RoyR@mesquitecotn.com
+            </td>
+        </tr>
+        <tr>
+            <td class="half tablename">
+                Paul Marshall
+            </td>
+            <td class="half tableemail">
+                PaulM@mesquitecotn.com
+            </td>
+        </tr>
+        <tr>
+            <td class="half tablename">
+                Susan Almaraz
+            </td>
+            <td class="half tableemail">
+                SusanA@mesquitecotn.com
+            </td>
+        </tr>
+    </table>
+    <h4>
+        Department Heads</h4>
+    <table id="positionheads">
+        <tr>
+            <td class="tablename">
+                Carolyn Marshall
+            </td>
+            <td class="indent">
+                Secretary
+            </td>
+            <td class="tableemail">
+                Secretary@mesquitecotn.com
+            </td>
+        </tr>
+        <tr>
+            <td class="tablename">
+                Shelly Mask
+            </td>
+            <td class="tabletitle">
+                Stewards
+            </td>
+            <td class="tableemail">
+                Steward@mesquitecotn.com
+            </td>
+        </tr>
+        <tr>
+            <td class="tablename">
+                Matthew Mask
+            </td>
+            <td class="tabletitle">
+                Trustees
+            </td>
+            <td class="tableemail">
+                Trustee@mesquitecotn.com
+            </td>
+        </tr>
+        <tr>
+            <td class="tablename">
+                Chris Rowe
+            </td>
+            <td class="tabletitle">
+                <abbr title="Sunday School & Discipleship Ministries International">
+                    SDMI</abbr>
+            </td>
+            <td class="tableemail">
+                SDMI@mesquitecotn.com
+            </td>
+        </tr>
+        <tr>
+            <td class="tablename">
+                Elois Bilyeu
+            </td>
+            <td class="tabletitle">
+                <abbr title="Nazarene Missions Internation">
+                    NMI</abbr>
+            </td>
+            <td class="tableemail">
+                NMI@mesquitecotn.com
+            </td>
+        </tr>
+        <tr>
+            <td class="tablename">
+                Krissy Rodriguez
+            </td>
+            <td class="tabletitle">
+                <abbr title="Nazarene Youth International">
+                    NYI</abbr>
+            </td>
+            <td class="tableemail">
+                NYI@mesquitecotn.com
+            </td>
+        </tr>
+        <tr>
+            <td class="tablename">
+                Carolyn Rasor
+            </td>
+            <td class="tabletitle">
+                Treasurer
+            </td>
+            <td class="tableemail">
+                Treasurer@mesquitecotn.com
+            </td>
+        </tr>
+    </table>
+    <br />
+
+</div>
+<!--<div id="contactsfoot">
+    <a href="www.nazarene.org">
+        <img id="nazseal" src="../Images/Nazarene_Seal.png" /></a>
+</div>-->
+<div id="googlemap">
+        
+
+</div>
+<script>
+    $(document).ready(function () {
+        var bottom = $("#mCSB_2").height();
+        $("#nazseal").css('bottom', bottom + "px");
+
+        $("a#seemap").click(function () {
+            $("#googlemap").toggle('fade').html('<iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=1301%2Bn%2Bbeltline%2Brd%2C%2Bmesquite%2C%2Btx&ie=UTF8&z=16&t=m&iwloc=near&output=embed"></iframe>');
+
+        });
+
+
+    });
+</script>

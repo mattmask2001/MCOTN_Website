@@ -1,0 +1,136 @@
+﻿<style>
+    .sunam h2
+    {
+        font-size:22px; 
+        width:100%; 
+        float: left; 
+        text-decoration: underline;
+    }
+    
+    .sunam h3
+    {
+            font-size:17px; 
+    }
+    
+    .wedyag h2
+    {
+        font-size:18px; 
+        width:100%; 
+        float: left; 
+        text-decoration: underline; 
+        text-align: center;
+        margin-top: 5px;
+        
+    }
+    .wedyag h3
+    {
+        font-size:16px; 
+        width:100%; 
+        float: left; 
+        margin-top: 5px;
+        text-align: center;
+    }
+    .wedyag p
+    {
+        font-size: 16px;
+    }
+    
+    
+    
+</style>
+<div id="serviceheader">
+    <div class="serviceheadertab" id="sunam">Sunday A.M.
+    </div>
+    <div class="serviceheadertab" id="tuespm">Tuesday Prayer Meeting
+    </div>
+    <div class="serviceheadertab" id="wedyag">Wednesday Young Adult Group
+    </div>
+    <div class="serviceheadertab" id="wedyg">Wednesday Youth Gathering
+    </div>
+</div>
+<div id="servicebody">
+    <div class="servicebodyinfo sunam">
+        <h2>
+            Sunday School: 9:30 - 10:30 a.m.</h2>
+        <div>
+            <h3>
+                Classes:</h3>
+            <ul id="classes">
+                <li>Nursery</li>
+                <li>Young Adults</li>
+                <li>Elementary</li>
+                <li>Adult I</li>
+                <li>Preteens</li>
+                <li>Adult II</li>
+                <li>Teens</li>
+                <br />
+                <br />
+                <br />
+            </ul>
+        </div>
+        <div style="margin-top: 20px;">
+            <h2>
+                Worship Service: 10:40 a.m. - Noon
+            </h2>
+            <p>
+                Please join us in worship as we incorporate newer worship songs and some great traditional
+                hymns of praise! Along with sermons following our Nazarene beliefs of Holiness and
+                Sanctification based on biblical principles.
+            </p>
+            <br />
+            <p>
+                Also, please check our calendar for any after service events that may be going on.
+            </p>
+        </div>
+    </div>
+    <div class="servicebodyinfo tuespm"><h1>Under Construction</h1></div>
+    <div class="servicebodyinfo wedyag">
+        <h2>
+            Time and Place</h2>
+        <h3>Wednesdays 7 - 8pm : Church sanctuary</h3>
+
+        <p>While we do generally meet at church, we will occasionally meet other places.
+           So please contact <abbr title="ChrisH@mesquitecotn.com">Chris Halicke</abbr> or <abbr title="MatthewM@mesquitecotn.com">Matthew Mask</abbr> for more information.</p>
+        <h2>
+           Description</h2>
+        <div>
+            <p style="text-align: center; ">This is an open discussion group, where we don't avoid the "hard" topics.<strong> In fact...We welcome them!</strong><br></p>
+            <p style="text-indent: 25px;">The goal of this group is to build a place of comfort and trust for those starting life after High School and entering early adulthood,
+            to be able to come and talk openly about anything they may have questions about or struggles they may be facing.
+            The group is led by 3 individuals, each with different personalities and gifts. Having these 3 leaders gives us the ability to commit
+            one on one time to someone if they would like to speak about something privately, as well as provide different insights during our discussions.<br></p>
+            <p>If you are just getting out into the "real" world, and would like to join a group with others going through similar situations, 
+                please come see us or send us an email.</p>
+
+        </div>
+    </div>
+    <div class="servicebodyinfo wedyg"><h1>Under Construction</h1></div>
+</div>
+<script>
+
+
+    
+    
+    var $serviceheadertab = $(".serviceheadertab");
+    var $servicebodyinfo = $(".servicebodyinfo")
+    
+    $servicebodyinfo.hide();
+    $serviceheadertab.click(function (e) {
+        var clickid = "." + $(this).attr('id').toString();
+                //Hide and show pages in the main
+        $(this).css("background-color", "#7c5f8f");
+        $servicebodyinfo.hide('fade');
+        $(clickid).show('fade');
+        
+        e.preventDefault();
+    
+        $serviceheadertab.hover(function () {
+            $serviceheadertab.toggleClass("hover")
+        });
+    
+        $serviceheadertab.css("background-color", "rgba(0,0,0,0.15)");
+        $(this).css("background-color", "#bba4cf");
+    
+
+    });
+</script>

@@ -1,0 +1,429 @@
+﻿body {
+    font-size: 26px;
+    font-family: Segoe UI Semibold;
+    text-decoration: none;
+    background-color: gray;
+    background-repeat: no-repeat;
+    background-position: 25px 90px;
+    background-size: 35%;
+}
+
+.hover {
+    background-color: #bba4cf;
+}
+
+.third {
+    width: 33%;
+}
+
+.half {
+    width: 50%;
+}
+
+.quarter {
+    width: 25%;
+}
+
+
+.split-left {
+    width: 49%;
+    float: left;
+}
+
+.split-right {
+    width: 49%;
+    float: right;
+}
+
+.font-color {
+}
+
+.font-size {
+}
+
+.background {
+}
+
+
+
+
+#content {
+    width: 100%;
+    top: 10%;
+    height: 80%;
+}
+
+/******Navagation Bar***********/
+
+.navbar {
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr='#bba4cf', endColorstr='#7c5f8f'); /* for IE */
+    background: -moz-linear-gradient(top, #bba4cf, #7c5f8f); /* for firefox 3.6+ */
+    background-image: linear-gradient(to bottom, #bba4cf 0%, #7c5f8f 100%);
+}
+
+.logo, .logo:hover {
+    position: absolute;
+    height: 50px;
+    width: auto;
+    color: white;
+    font-size: 36px;
+    text-shadow: inset 0px 0px 3px 3px rgb(0,0,0,0.5);
+    text-decoration: none;
+    font-family: Baskerville Old Face;
+}
+
+.logo:active
+{
+    text-decoration: none;
+    color: white;
+}
+.logo:focus
+{
+    text-decoration: none;
+    color: white;
+}
+
+.menu a {
+    color: white;
+    font-size: .7em;
+    text-shadow: 1px 1px grey;
+    font-family: Cambria;
+    padding: 2px;
+}
+
+.nav-tabs {
+    border-bottom: none;
+}
+
+
+.nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
+    background-color: #bba4cf;
+    border-color: White;
+    
+}
+
+.dropdown-menu {
+    background-color: #bba4cf;
+}
+
+.dropdown-menu > li {
+    font-size: large;
+    color: white;
+}
+
+.dropdown-menu > li > a {
+    font-size: large;
+    color: White;
+}
+
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus, .dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus {
+    background-color: #7c5f8f;
+    background: -moz-linear-gradient(top, #bba4cf, #7c5f8f); /* for firefox 3.6+ */
+    background-image: linear-gradient(to bottom, #bba4cf 0%, #7c5f8f 100%);
+}
+
+.nav a:hover .caret {
+    border-top-color: #6f338b;
+    border-bottom-color: #6f338b;
+}
+
+.nav .caret {
+    border-top-color: #ffffff;
+    border-bottom-color: #ffffff;
+}
+
+.nav-tabs > li > a {
+    border: none;
+}
+
+.nav-tabs > li > a:hover {
+    background-color: #BBA4CF;
+    border-color: none;
+    cursor: pointer;
+}
+
+.nav-tabs .dropdown-menu {
+    left: -1px;
+}
+
+.nav > li > a {
+    padding-right: 8px;
+    padding-left: 5px;
+}
+
+li.dropdown
+{
+    position: relative;
+}
+
+/***Column 1 styles***/
+.contentcol1 {
+    position: absolute;
+    height: 84%;
+    left: 0%;
+    width: 39%;
+    top: 10%;
+}
+
+#backgroundimagecol1 {
+    position: absolute;
+    left: 12%;
+    top: 16%;
+    width: 100%;
+}
+
+/***Column 2 styles***/
+
+.mCSB_container {
+    overflow: initial;
+}
+
+.contentcol2 {
+    position: absolute;
+    height: 84%;
+    left: 39.5%;
+    width: 60.5%;
+    top: 10%;
+}
+
+#backgroundimagecol2 {
+    position: absolute;
+    left: 12%;
+    top: 16%;
+    width: 50%;
+}
+
+.maincontent {
+    position: absolute;
+    background-color: #7c5f8f;
+    top: 1%;
+    width: 80%;
+    height: 92%;
+    display: none;
+    left: 17%;
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    border-radius: 4px;
+    overflow: auto;
+    color: White;
+    font-size: large;
+    padding: 2px;
+}
+
+
+/******Footer************/
+.footer {
+    position: absolute;
+    top: 94%;
+    height: 6%;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#bba4cf', endColorstr='#7c5f8f'); /* for IE */
+    background: -moz-linear-gradient(top, #bba4cf, #7c5f8f); /* for firefox 3.6+ */
+    background-image: linear-gradient(to bottom, #bba4cf 0%, #7c5f8f 100%);
+    padding: .4%;
+}
+
+.footer a {
+    top: 5%;
+    color: White;
+    text-decoration: none;
+    margin-right: 5px;
+    margin-top: 10px;
+    padding: .4%;
+}
+
+
+
+/*****Forms Styles*******/
+
+.formbox, #uname, #pword, #uname:focus, #pword:focus, .formbox:focus, .formbox#uname:focus, .formbox#pword:focus {
+    height: 25px;
+    width: 200px;
+    margin: 10px;
+    border-radius: 15px;
+    box-shadow: 2px 2px 2px grey;
+    font-size: 14px;
+    text-indent: 10px;
+    outline-style: none;
+}
+
+
+
+h3#loginheader {
+    color: White;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #BBA4CF;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    padding: 5px;
+    height: 50px;
+    font-family: Segoe UI;
+    font-size: 34px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 4px 10px 4px;
+    margin-bottom: 0;
+    // For input.btn;
+    font-size: @baseFontSize;
+    line-height: @baseLineHeight;
+    color: @grayDark;
+    text-align: center;
+    text-shadow: 0 1px 1px rgba(255,255,255,.75);
+    vertical-align: middle;
+    .buttonBackground(@white, darken(@white, 10%));
+    border: 1px solid #ccc;
+    border-bottom-color: #bbb;
+    .border-radius(4px);
+    @shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
+    .box-shadow(@shadow);
+    cursor: pointer;
+    /*Give IE7 some love*/
+    .reset-filter();
+    .ie7-restore-left-whitespace();
+}
+
+
+.btn:hover {
+    color: @grayDark;
+    text-decoration: none;
+    background-color: darken(@white, 10%);
+    background-position: 0 -15px;
+    // transition is only when going to hover, otherwise the background // behind the gradient (there for IE<=9 fallback) gets mismatched .transition(background-position .1s linear);
+}
+
+
+.btn:focus {
+    .tab-focus();
+}
+
+.btn.active, .btn:active {
+    background-image: none;
+    @shadow: inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05);
+    .box-shadow(@shadow);
+    background-color: darken(@white, 10%);
+    background-color: darken(@white, 15%) e("\9");
+    outline: 0;
+}
+
+
+.btn.disabled, .btn[disabled] {
+    cursor: default;
+    background-image: none;
+    background-color: darken(@white, 10%);
+    .opacity(65);
+    .box-shadow(none);
+}
+
+/*****Contacts: *************
+*********************************/
+
+
+
+
+/********Events: Calendar**********
+**********************************/
+#calendar {
+    text-align: center;
+}
+
+#calendar h1 {
+    width: 100%;
+    float: left;
+    text-align: center;
+    text-shadow: 1px 1px 1px black;
+}
+
+}
+
+iframe {
+    position: relative;
+    border-radius: 5px;
+    box-shadow: 8px 8px 8px rgba(0,0,0,0.175);
+}
+
+/*****Services: Tabs*****************************
+************************************************/
+#serviceheader {
+    width: 100%;
+    position: relative;
+    height: 70px;
+}
+
+.serviceheadertab {
+    float: left;
+    width: 25%;
+    white-space: pre-wrap;
+    height: 100%;
+    background-color: rgba(0,0,0,0.15);
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    padding: 5px 8px 10px 8px;
+    font-size: 14px;
+    text-align: center;
+    vertical-align: middle;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+.serviceheadertab:hover {
+    background-color: #bba4cf !important;
+}
+
+
+#servicebody {
+    padding: 10px 5px 5px 5px;
+    position: relative;
+    border: none;
+    text-shadow: 1px 1px 1px black;
+}
+
+.servicebodyinfo h2 {
+    font-size: 26px;
+    width: 100%;
+    float: left;
+    position: relative;
+    text-align: center;
+    text-shadow: black;
+}
+
+#classes li {
+    width: 50%;
+    float: left;
+}
+
+/*********jquery ui style changes*************/
+.ui-widget-content {
+    color: White;
+    background-color: none;
+    background: none !important;
+    border: none;
+}
+
+.ui-widget-header {
+    border: none;
+    text-align: center;
+    background-color: rgba(0,0,0,0.1);
+    background: none;
+    color: White;
+    font-size: 10px;
+    border-bottom: 1px solid white;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+    background: none;
+    background-color: rgba(0,0,0,0.1);
+    color: White;
+}
+
+.ui-state-default a, .ui-state-default a:link, .ui-state-default a:visited {
+    color: White;
+}
+
+.ui-state-hover a, .ui-state-hover a:hover, .ui-state-hover a:link, .ui-state-hover a:visited {
+    background-color: #bba4cf;
+}
+
+li.ui-tabs-active a {
+    background-color: #bba4cf;
+}
